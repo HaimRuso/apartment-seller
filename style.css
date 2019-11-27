@@ -25,7 +25,7 @@ input{
 
 label{
      font: 300 16px/1.7 'Open Sans', sans-serif;
-     color: #443729;
+     color:whitesmoke;
      cursor: pointer;
 } 
 
@@ -71,7 +71,9 @@ label{
     "i la a"
     "i lpr p"
     "i lr r"
-    "i lpark park";
+    "i lpark park"
+    "i lim imdie";
+    
     box-shadow: 1px 1px 3px #0a1612;
     margin: 20px;
     padding: 20px;
@@ -116,6 +118,9 @@ button:active{background-color: #443729;}
 
 .result>.l-addr{
     grid-area: la;
+    color:black;
+    display: inline-block;
+    font-size: 1cm;
 }
 
 .result>.l-price{
@@ -128,9 +133,13 @@ button:active{background-color: #443729;}
 
 .result>.l-park{
     grid-area: lpark;
+    
 }
 
-.result>.l-immediate{}
+.result>.l-immediate{
+    grid-area: lim;
+    
+}
 
 .result>.address{
     grid-area: a;
@@ -148,7 +157,13 @@ button:active{background-color: #443729;}
     grid-area: park;
 }
 
-.result>.immediate{}
+.result>.immediate{
+    grid-area: imdie;
+    
+}
+
+
+
 
 .no-match{
     color: #DD6300;

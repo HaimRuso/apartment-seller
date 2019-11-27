@@ -4,8 +4,8 @@
 <head>
     <title>Selouse</title>
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
@@ -35,11 +35,44 @@
 
     <div id="results"></div>
 
+    <script class="insert" type="text/x-handlebars-template">
+       {{#each apartments as |item|}}
+        <div class="result">      
+        <img src="{{img}}">
+        <label class="l-address"> Address: </label>
+        <label class="address">{{address}}</label>
+        <label class="l-price">Price:</label>
+        <label class="price">{{price}}</label>
+        <label class="l-rooms">Rooms:</label>
+        <label class="rooms">{{rooms}}</label>
+        <label class="l-park">Parking:</label>
+        {{#if parking}}
+        <label class="parking">Yes</label>
+        {{else}}
+        <label class="parking">No</label>
+        {{/if}}
+        <label class="l-immediate">immediate</label>
+        {{#if immediate}}
+ 
+        <label class="immediate">Name- {{contactDetails.name}} Email- {{contactDetails.email}} </label>
+        
+       
+        
+        {{else}}
+        <label class="immediate">No </label>
+        {{/if}}
+        
+
+    </div>
+
+       {{/each}}
+    </script>
     <!-- Your Code Here -->
     <!-- You should start doing handlebar stuff here -->
     <!-- Your Code Here -->
 
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
     <script src="apt-data.js"></script>
     <script src="apt-filter.js"></script>
